@@ -34,11 +34,7 @@ public sealed partial class MainLayout
         _ => true
     };
 
-    private bool SortDisabled => new Uri(Nav.Uri).Segments.LastOrDefault() switch
-    {
-        "voicechat" or "chat" => false,
-        _ => true
-    };
+    private bool SortDisabled => false;
 
     private void OnMenuClicked() => _drawerOpen = !_drawerOpen;
 
